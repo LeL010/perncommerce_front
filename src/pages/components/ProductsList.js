@@ -20,7 +20,7 @@ export default function ProductList({
   setSearchedProducts,
 }) {
   const [searchQuery, setSearchQuery] = useState("");
-
+  console.log(products);
   const handleInputChange = (e) => {
     setSearchQuery(e.target.value);
   };

@@ -45,7 +45,7 @@ function Recommend({ products }) {
             distinctItems.size + " unique items found in sales history"
           );
           setItemCount(distinctItems.size);
-
+          console.log(listOfProducts);
           const productIndexMap = {};
           listOfProducts.forEach((product, index) => {
             productIndexMap[product.productName] = index; // Index starts from 1
@@ -65,7 +65,7 @@ function Recommend({ products }) {
 
             setTestCart(productIndexArray);
           }
-          console.log(orders);
+          //console.log(orders);
           // Check if orders exist before mapping them
           if (orders && Array.isArray(orders)) {
             const mappedOrders = orders.map((order) => {
@@ -81,6 +81,7 @@ function Recommend({ products }) {
                 : [];
               return productNames;
             });
+            console.log(mappedOrders);
             setOrdersHistory(mappedOrders);
           }
         } catch (error) {
